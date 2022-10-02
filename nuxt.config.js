@@ -68,7 +68,10 @@ export default {
   build: {
   },
 
-  routerBase,
+  // routerBase,
+  router: {
+    base: '/wls-site/'
+  },
   generate: {
     dir: 'docs'
   },
