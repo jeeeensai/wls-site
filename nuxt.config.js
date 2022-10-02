@@ -2,7 +2,7 @@
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/<repository-name>/'
+    base: '/wls-site/'
   }
 } : {}
 
@@ -68,5 +68,8 @@ export default {
   build: {
   },
 
-  routerBase
+  routerBase,
+  generate: {
+    dir: 'docs'
+  },
 }
