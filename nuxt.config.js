@@ -1,10 +1,18 @@
 /* nuxt.config.js */
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+let routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/wls-site/'
   }
 } : {}
+
+routerBase = {};
+if (process.env.DEPLOY_ENV === 'GH_PAGES'){
+  routerBase = {router:{base: '/wls-site/'}};
+}else{
+  routerBase = {};
+}
+
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -68,10 +76,10 @@ export default {
   build: {
   },
 
-  // routerBase,
-  router: {
-    base: '/wls-site/'
-  },
+  routerBase,
+  // router: {
+  //   base: '/wls-site/'
+  // },
   generate: {
     dir: 'docs'
   },
