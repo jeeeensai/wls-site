@@ -2,7 +2,7 @@
   <div>
     <b-navbar>
       <template #brand>
-        <b-navbar-item tag="router-link" :to="{ path: '/home' }">
+        <b-navbar-item tag="router-link" :to="{ name: 'index' }">
           <img
             src="logo.png"
             alt="Original W.L.S"
