@@ -85,7 +85,11 @@
               <ul>
                 <li>NPO法人のバスケ運営に興味がある方</li>
               </ul>
-              <p>お問い合わせはこちら</p>
+            </div>
+            <div class="is-flex is-justify-content-center my-button">
+              <b-button class="button is-link is-outlined is-rounded is-medium is-fullwidth" tag="router-link" :to="{ name: 'inquiry' }">
+                体験予約/お問い合わせ
+              </b-button>
             </div>
           </div>
         </div>
@@ -136,6 +140,10 @@ export default {
 }
 .card-height{
   height: 100%;
+}
+.my-button{
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 @media screen and (max-width: 1440px) {/* 640pxまで*/
   .hero-back-image {
