@@ -15,19 +15,19 @@
       </template>
 
       <template #end>
-        <b-navbar-item href="#" class="burger_menu">
+        <b-navbar-item tag="router-link" :to="{ name: 'concept' }" class="burger_menu">
           concept
         </b-navbar-item>
-        <b-navbar-item href="#" class="burger_menu">
+        <b-navbar-item tag="router-link" :to="{ name: 'picture' }" class="burger_menu">
           picture
         </b-navbar-item>
-        <b-navbar-item href="#" class="burger_menu">
+        <b-navbar-item tag="router-link" :to="{ name: 'schedule' }" class="burger_menu">
           schedule
         </b-navbar-item>
-        <b-navbar-item href="#" class="burger_menu">
+        <b-navbar-item tag="router-link" :to="{ name: 'game' }" class="burger_menu">
           game
         </b-navbar-item>
-        <b-navbar-item href="#" class="burger_menu">
+        <b-navbar-item tag="router-link" :to="{ name: 'inquiry' }" class="burger_menu">
           Q&A
         </b-navbar-item>
       </template>
