@@ -1,12 +1,12 @@
 <template>
-  <div class="hero is-link is-fullheight-with-navbar hero-back-image">
-    <div class="is-flex is-align-items-center is-justify-content-center is-flex-direction-column concept_section">
+  <div class="hero is-fullheight-with-navbar hero-back-image-concept">
+    <div class="is-flex is-align-items-center is-flex-direction-column concept_section">
       <section class="section">
-        <h2 class="title is-size-3">
+        <h2 class="title is-size-3 has-text-white my-5 is-size-3 is-size-1-desktop">
           Basketball Club Team
         </h2>
-        <p class="subtitle is-size-6">
-          <ol>
+        <div class="subtitle is-size-6 is-size-5-desktop mt-5 has-text-weight-bold five_items">
+          <ol class="pl-6">
             <li class="fadeLeft">
               基礎を大切にすること
             </li>
@@ -23,8 +23,8 @@
               バスケを楽しむこと
             </li>
           </ol>
-        </p>
-        <p>
+        </div>
+        <p class="has-text-white is-size-6 is-size-5-desktop has-text-weight-bold">
           これらはチーム結成時から心がけているモットーです！<br>
           この気持ちを忘れずに一緒に頑張れるメンバーを募集しています♪
         </p>
@@ -42,7 +42,7 @@ export default {
 }
 </script>
 <style>
-.hero-back-image {
+.hero-back-image-concept {
   background-image: url("../static/baske3.jpg");
   background-size: cover;
   background-repeat: no-repeat;/*画像が繰り返すのを防ぐ*/
@@ -65,6 +65,10 @@ export default {
   animation-delay: 1.2s;
 }
 
+.five_items{
+  letter-spacing: 1px;
+  color: lightyellow;
+}
 /* 左から */
 
 .fadeLeft{
