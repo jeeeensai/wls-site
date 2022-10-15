@@ -20,31 +20,60 @@
         <div class="card card-height">
           <div class="card-content">
             <div class="content">
-              <h2>活動時間/場所</h2>
-              <p>
-                時間：隔週日曜 13:00〜17:00<br>
-                <span class="ml-span">毎週水曜 19:30～21:30(大阪市立緑中学校)</span>
-              </p>
-              <p>場所：大阪府東大阪市立<ruby>意岐部<rt>おきべ</rt></ruby>中学校</p>
-              <div class="googlemap">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.48226008932!2d135.5929087150541!3d34.66777608044296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000df8edb3594b3%3A0xdde18801b5123fef!2z5p2x5aSn6Ziq5biC56uL5oSP5bKQ6YOo5Lit5a2m5qCh!5e0!3m2!1sja!2sjp!4v1664689627774!5m2!1sja!2sjp"
-                  width="600"
-                  height="450"
-                  style="border:0;"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                />
+              <div class="columns is-5 mx-2">
+                <div class="column">
+                  <h2>活動時間/場所</h2>
+                  <p>
+                    時間：隔週日曜 13:00〜17:00<br>
+                    場所：大阪府東大阪市立<ruby>意岐部<rt>おきべ</rt></ruby>中学校
+                  </p>
+                  <div class="googlemap">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.48226008932!2d135.5929087150541!3d34.66777608044296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000df8edb3594b3%3A0xdde18801b5123fef!2z5p2x5aSn6Ziq5biC56uL5oSP5bKQ6YOo5Lit5a2m5qCh!5e0!3m2!1sja!2sjp!4v1664689627774!5m2!1sja!2sjp"
+                      width="600"
+                      height="450"
+                      style="border:0;"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                  <br>
+                  <p>車でのアクセス：駐車場あり、校内の駐車スペースをご利用下さい。（台数に限りあり）</p>
+                  <p>電車でのアクセス：近鉄奈良線八戸ノ里駅より15分程度、地下鉄長田駅より20分程度です。</p>
+                  <p>※自転車,バイクでのアクセスも可能です。</p>
+                </div>
+                <div class="column">
+                  <h2 class="is-invisible">
+                    活動時間/場所
+                  </h2>
+                  <p>
+                    時間：毎週水曜 19:30～21:30<br>
+                    場所：大阪市立<ruby>緑<rt>みどり</rt></ruby>中学校
+                  </p>
+                  <div class="googlemap">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.8615046052832!2d135.56249631505528!3d34.70867298043239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e05677410a83%3A0x851ea582031f8807!2z5aSn6Ziq5biC56uL57eR5Lit5a2m5qCh!5e0!3m2!1sja!2sjp!4v1665821635017!5m2!1sja!2sjp"
+                      width="600"
+                      height="450"
+                      style="border:0;"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                  <br>
+                  <p>車でのアクセス：近隣のコインパーキングをご利用下さい。</p>
+                  <p>電車でのアクセス：地下鉄新森古市、今福鶴見、横堤駅より15分程度です。</p>
+                  <p>※自転車,バイクでのアクセスも可能です。</p>
+                </div>
               </div>
-              <br>
-              <p>車でのアクセス：駐車場あり、校内の駐車スペースをご利用下さい。（台数に限りあり）</p>
-              <p>電車でのアクセス：近鉄奈良線八戸ノ里駅より15分程度、地下鉄長田駅より20分程度です。</p>
-              <p>※自転車でのアクセスも可能です。</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="columns is-5 mx-2">
       <div class="column">
         <div class="card card-height">
           <div class="card-content">
@@ -117,7 +146,7 @@ export default {
 }
 .googlemap {
   position: relative; /* 子要素の基準とする */
-  padding-bottom: 75%; /* 表示するパディング領域の縦横比（4：3） */
+  padding-bottom: 60%; /* 表示するパディング領域の縦横比（4：3） */
   height: 0;
   overflow: hidden;
 }
