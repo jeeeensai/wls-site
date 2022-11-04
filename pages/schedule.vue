@@ -220,6 +220,11 @@ export default {
   height: 20vh;
   width: 12vw;
 }
+@media screen and (max-width: 1023px) {
+  .tbody_td {
+    height: 10vh;
+  }
+}
 .calendar_contents{
   font-size: 0.5rem;
 }
@@ -227,7 +232,6 @@ export default {
   height: 100%;
 }
 .bg-color{
-  /* background:linear-gradient(45deg, black, transparent); */
   background: linear-gradient(90deg, rgba(4, 20, 104, 1), rgba(20, 22, 31, 1) 50%, rgba(255, 255, 255, 1));
 }
 </style>
