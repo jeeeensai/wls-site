@@ -1,18 +1,31 @@
 <template>
-  <div class="is-flex is-justify-content-center">
-    <section class="section">
-      <h2 class="title is-3 has-text-grey">
-        Coming Soon...
-      </h2>
-    </section>
+  <div class="container is-fullwidth is-flex mt-6">
+    <div class="columns">
+      <div v-for="(image, i) in images" :key="i" class="column is-one-quarter" :src="image">
+        <img class="image" :src="image" @click="index = i">
+        <no-ssr>
+          <vue-gallery-slideshow :images="images" :index="index" @close="index = null" />
+        </no-ssr>
+      </div>
+    </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'PicturePage',
   layout () {
     return 'top'
+  },
+  data () {
+    return {
+      images: [
+        'picture/img_1.jpg',
+        'picture/img_2.jpg',
+        'picture/img_3.jpg',
+        'picture/img_4.jpg'
+      ],
+      index: null
+    }
   }
 }
 </script>
