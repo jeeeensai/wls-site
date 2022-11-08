@@ -1,5 +1,5 @@
 <template>
-  <div class="is-flex is-justify-content-center bg-color">
+  <div class="height_93vh is-flex is-justify-content-center bg-color">
     <section class="section">
       <!-- <h2 class="title is-3 has-text-grey">
         Coming Soon...
@@ -230,6 +230,9 @@ export default {
 }
 .height_100{
   height: 100%;
+}
+.height_93vh{
+  min-height: 93vh;
 }
 .bg-color{
   background: linear-gradient(90deg, rgba(4, 20, 104, 1), rgba(20, 22, 31, 1) 50%, rgba(255, 255, 255, 1));
