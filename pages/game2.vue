@@ -1,63 +1,14 @@
 <template>
   <div class="is-flex is-justify-content-center">
     <section class="section">
-      <h1 class="has-text-centered is-size-4-mobile is-size-2-tablet">
-        Game Result
-      </h1>
-      <div
-        v-for="(item, index) in gameDatas"
-        :key="index"
-        class="my-5"
-      >
-        <p class="has-text-left is-size-7-mobile is-size-5-tablet">
-          {{ item.date.format("YYYY/MM/DD ddd") + '@' + item.place }}
-        </p>
-        <div class="is-flex is-justify-content-center my-5">
-          <p class="is-flex is-justify-content-center is-align-items-end">
-            <span class="is-size-7-mobile is-size-5-tablet pl-2">
-              VS
-            </span>
-            <span class="has-text-centered width_35vw mx-2 is-size-6-mobile is-size-4-tablet has-text-weight-bold">
-              {{ item.opponent }}
-            </span>
-          </p>
-          <p class="is-flex is-justify-content-center is-align-items-center">
-            <span
-              class="has-text-centered width_10vw mx-2 is-size-6-mobile is-size-4-tablet"
-            >
-              {{ item.originalPoint }}
-            </span>
-            <span class="is-size-6-mobile is-size-4-tablet">
-              -
-            </span>
-            <span
-              class="has-text-centered width_10vw mx-2 is-size-6-mobile is-size-4-tablet"
-            >
-              {{ item.opponentPoint }}
-            </span>
-            <span
-              v-if="item.opponentPoint < item.originalPoint"
-              class="has-text-centered width_10vw mx-2 is-size-6-mobile is-size-4-tablet"
-              :class="{'winner': item.opponentPoint < item.originalPoint, 'loser': item.opponentPoint > item.originalPoint}"
-            >
-              Win
-            </span>
-            <span
-              v-else
-              class="has-text-centered width_10vw mx-2 is-size-6-mobile is-size-4-tablet"
-              :class="{'winner': item.opponentPoint < item.originalPoint, 'loser': item.opponentPoint > item.originalPoint}"
-            >
-              Lose
-            </span>
-          </p>
-        </div>
-      </div>
+      <canvas id="myCanvas" />
     </section>
   </div>
 </template>
 
 <script>
 import moment from 'moment'
+// import * as THREE from 'three'
 
 export default {
   name: 'GamePage',
@@ -134,6 +85,33 @@ export default {
       ]
     }
   }
+  // mounted () {
+  //   // canvas要素を渡す。
+  //   const renderer = new THREE.WebGLRenderer({
+  //     canvas: document.querySelector('#myCanvas')
+  //   })
+  //   renderer.setSize(960, 540)
+  //   const scene = new THREE.Scene()
+  //   const camera = new THREE.PerspectiveCamera(45, 960 / 540)
+  //   camera.position.set(0, 0, +1000)
+  //   const geometry = new THREE.BoxGeometry(500, 500, 500)
+  //   const material = new THREE.MeshNormalMaterial()
+  //   const light = new THREE.PointLight(0xFFFFFF)
+  //   light.position.set(2, 2, 2)// ライトの位置を設定
+  //   scene.add(light)
+  //   // new THREE.Mesh(ジオメトリ,マテリアル)
+  //   const box = new THREE.Mesh(geometry, material)
+  //   // シーンに追加
+  //   scene.add(box)
+  //   // 初回実行
+  //   tick()
+  //   function tick () {
+  //     requestAnimationFrame(tick)
+  //     // アニメーション処理をここに書く
+  //     box.rotation.y += 0.01
+  //     renderer.render(scene, camera) // レンダリング
+  //   }
+  // }
 }
 </script>
 <style>

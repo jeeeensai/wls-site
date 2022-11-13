@@ -27,6 +27,9 @@
         <b-navbar-item tag="router-link" :to="{ name: 'game' }" class="burger_menu">
           game
         </b-navbar-item>
+        <!-- <b-navbar-item tag="router-link" :to="{ name: 'game2' }" class="burger_menu">
+          game2
+        </b-navbar-item> -->
         <b-navbar-item tag="router-link" :to="{ name: 'inquiry' }" class="burger_menu">
           Q&A
         </b-navbar-item>

@@ -1,9 +1,6 @@
 <template>
   <div class="height_93vh is-flex is-justify-content-center bg-color">
     <section class="section">
-      <!-- <h2 class="title is-3 has-text-grey">
-        Coming Soon...
-      </h2> -->
       <div class="columns is-mobile">
         <div class="column is-two-fifths is-align-self-flex-end pb-0">
           <button
@@ -45,11 +42,15 @@
             <td
               v-for="(day, index2) in week"
               :key="index2"
-              :class="'tbody_td is-size-7-touch '+ day.classTd"
+              class="tbody_td is-size-7-touch"
+              :class="day.classTd"
             >
               <div class="is-flex is-flex-direction-column height_100">
                 <div class="is-flex-grow-0">
-                  <p :class="'m-1 has-text-right '+ day.classSpan">
+                  <p
+                    class="m-1 has-text-right"
+                    :class="day.classSpan"
+                  >
                     {{ day.date }}
                   </p>
                 </div>
