@@ -1,8 +1,8 @@
 <template>
   <div>
-    <b-navbar>
+    <b-navbar fixed-top class="p-2 border_bottom c-header">
       <template #brand>
-        <b-navbar-item tag="router-link" :to="{ name: 'index' }">
+        <b-navbar-item tag="router-link" :to="{ name: 'index' }" class="p-0">
           <img
             src="logo.png"
             alt="Original W.L.S"
@@ -15,6 +15,9 @@
       </template>
 
       <template #end>
+        <b-navbar-item tag="router-link" :to="{ name: 'index' }" class="burger_menu">
+          home
+        </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'concept' }" class="burger_menu">
           concept
         </b-navbar-item>
@@ -29,6 +32,9 @@
         </b-navbar-item>
         <!-- <b-navbar-item tag="router-link" :to="{ name: 'game2' }" class="burger_menu">
           game2
+        </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'samplepage' }" class="burger_menu">
+          sample
         </b-navbar-item> -->
         <b-navbar-item tag="router-link" :to="{ name: 'inquiry' }" class="burger_menu">
           Q&A
@@ -77,5 +83,8 @@ export default {
 }
 .logo{
   max-height:50px !important;
+}
+.border_bottom{
+  border-bottom: solid 1px;
 }
 </style>

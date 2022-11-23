@@ -87,28 +87,39 @@ export default {
   }
   // mounted () {
   //   // canvas要素を渡す。
+  //   // レンダラー作成
   //   const renderer = new THREE.WebGLRenderer({
   //     canvas: document.querySelector('#myCanvas')
   //   })
   //   renderer.setSize(960, 540)
+  //   // シーンを作成
   //   const scene = new THREE.Scene()
+  //   // カメラを作成
   //   const camera = new THREE.PerspectiveCamera(45, 960 / 540)
   //   camera.position.set(0, 0, +1000)
-  //   const geometry = new THREE.BoxGeometry(500, 500, 500)
-  //   const material = new THREE.MeshNormalMaterial()
-  //   const light = new THREE.PointLight(0xFFFFFF)
-  //   light.position.set(2, 2, 2)// ライトの位置を設定
-  //   scene.add(light)
+  //   // 球体を作成
+  //   const geometry = new THREE.SphereGeometry(300, 30, 30)
+  //   // const geometry = new THREE.BoxGeometry(500, 500, 500)
+  //   // const material = new THREE.MeshNormalMaterial()
+  //   const material = new THREE.MeshStandardMaterial({ color: 0xFF0000 })
+  //   // メッシュを作成
+  //   // const light = new THREE.PointLight(0xFFFFFF)
+  //   // light.position.set(2, 2, 2)// ライトの位置を設定
+  //   // scene.add(light)
+  //   // 平行光源
+  //   const directionalLight = new THREE.DirectionalLight(0xFFFFFF)
+  //   directionalLight.position.set(1, 1, 2)
+  //   scene.add(directionalLight)
   //   // new THREE.Mesh(ジオメトリ,マテリアル)
-  //   const box = new THREE.Mesh(geometry, material)
+  //   const mesh = new THREE.Mesh(geometry, material)
   //   // シーンに追加
-  //   scene.add(box)
+  //   scene.add(mesh)
   //   // 初回実行
   //   tick()
   //   function tick () {
   //     requestAnimationFrame(tick)
   //     // アニメーション処理をここに書く
-  //     box.rotation.y += 0.01
+  //     mesh.rotation.y += 0.01
   //     renderer.render(scene, camera) // レンダリング
   //   }
   // }

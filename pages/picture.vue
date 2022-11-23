@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1 class="has-text-centered is-size-4-mobile is-size-2-tablet mt-5 border_y">
+    <h1 class="has-text-centered is-size-4-mobile is-size-2-tablet border_y">
       Team Photo
     </h1>
-    <div class="container is-fullwidth is-flex mt-6">
+    <div class="container is-fullwidth is-flex">
       <div class="columns">
         <div v-for="(image, i) in images" :key="i" class="column is-one-quarter" :src="image">
           <img class="image" :src="image" @click="index = i">
@@ -36,7 +36,9 @@ export default {
 </script>
 <style>
 .border_y{
-  border-top: solid;
-  border-bottom: solid;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  /* border-top: solid;
+  border-bottom: solid; */
 }
 </style>
