@@ -3,6 +3,11 @@
   "short_name": "wls-site",
   "icons": [
     {
+      "src": "/transparent_logo.png",
+      "size": "144x144",
+      "type": "image/png"
+    },
+    {
       "src": "/wls-site/_nuxt/icons/icon_64x64.e3e9fb.png",
       "sizes": "64x64",
       "type": "image/png",
@@ -47,6 +52,6 @@
   ],
   "start_url": "/wls-site/?standalone=true",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#FFFFFF",
   "lang": "en"
 }
