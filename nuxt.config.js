@@ -71,7 +71,10 @@ export default {
   pwa: {
     manifest: {
       lang: 'en'
-    }
+    },
+    // icon: {
+    //   fileName: '/Users/jeeee/tmp/wls-site/static/icon.png',
+    // }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -95,7 +98,7 @@ export default {
     display:'standalone',
     background_color:'#FFFFFF',
     icons:[{
-      src:`/transparent_logo.png`,
+      src:`/icon.png`,
       size:"144x144",
       type:"image/png"
     }]
