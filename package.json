@@ -20,6 +20,7 @@
     "moment": "^2.29.4",
     "nuxt": "^2.15.8",
     "nuxt-buefy": "^0.4.13",
+    "nuxt-gsap-module": "^1.7.2",
     "three": "^0.146.0",
     "vue": "^2.6.14",
     "vue-gallery-slideshow": "^1.5.2",
