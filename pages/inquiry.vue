@@ -7,6 +7,7 @@
       frameborder="0"
       marginheight="0"
       marginwidth="0"
+      scrolling="no"
     >
       読み込んでいます…
     </iframe>
