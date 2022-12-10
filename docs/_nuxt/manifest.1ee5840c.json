@@ -8,49 +8,49 @@
       "type": "image/png"
     },
     {
-      "src": "/wls-site/_nuxt/icons/icon_64x64.ef2f04.png",
+      "src": "/_nuxt/icons/icon_64x64.ef2f04.png",
       "sizes": "64x64",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/wls-site/_nuxt/icons/icon_120x120.ef2f04.png",
+      "src": "/_nuxt/icons/icon_120x120.ef2f04.png",
       "sizes": "120x120",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/wls-site/_nuxt/icons/icon_144x144.ef2f04.png",
+      "src": "/_nuxt/icons/icon_144x144.ef2f04.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/wls-site/_nuxt/icons/icon_152x152.ef2f04.png",
+      "src": "/_nuxt/icons/icon_152x152.ef2f04.png",
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/wls-site/_nuxt/icons/icon_192x192.ef2f04.png",
+      "src": "/_nuxt/icons/icon_192x192.ef2f04.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/wls-site/_nuxt/icons/icon_384x384.ef2f04.png",
+      "src": "/_nuxt/icons/icon_384x384.ef2f04.png",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/wls-site/_nuxt/icons/icon_512x512.ef2f04.png",
+      "src": "/_nuxt/icons/icon_512x512.ef2f04.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/wls-site/?standalone=true",
+  "start_url": "/?standalone=true",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "lang": "en"
