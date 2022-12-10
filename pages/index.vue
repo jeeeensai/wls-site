@@ -1,14 +1,16 @@
 <template>
   <div>
-    <div class="c-loader-bg">
-      <div class="c-loader-bg-line1" />
-      <div class="c-loader-bg-line2" />
-      <div class="c-loader-bg-line3" />
-      <div class="c-loader-bg-line4" />
-      <span class="has-text-white is-size-3 c-loader-text">
-        ORIGINAL W.L.S
-      </span>
-    </div>
+    <template v-if="accessCount">
+      <div class="c-loader-bg">
+        <div class="c-loader-bg-line1" />
+        <div class="c-loader-bg-line2" />
+        <div class="c-loader-bg-line3" />
+        <div class="c-loader-bg-line4" />
+        <span class="has-text-white is-size-3 c-loader-text">
+          ORIGINAL W.L.S
+        </span>
+      </div>
+    </template>
     <div class="anime_content">
       <section class="hero is-fullheight-with-navbar hero-back-image" />
       <div class="mb-2">
@@ -140,30 +142,35 @@
 
 <script>
 export default {
-  name: 'SamplePage',
+  name: 'IndexPage',
   layout () {
     return 'top'
   },
+  data () {
+    return {
+      bgClass: 'c-loader-bg',
+      accessCount: false
+    }
+  },
+  beforeMount () {
+    if (!sessionStorage.getItem('accessCount')) {
+      this.accessCount = true
+    } else { // 二回目以降ローディングアニメーションさせない
+      this.accessCount = false
+    }
+  },
   mounted () {
-    const jsText = document.querySelectorAll('.c-loader-text')
-    jsText.forEach((target) => {
-      let newText = ''
-      const text = target.textContent
-      const result = text.split('')
-      for (let i = 0; i < result.length; i++) {
-        newText += '<span>' + result[i] + '</span>'
-      }
-      target.innerHTML = newText
-    })
     // アニメーションクラスの変数宣言
     const bgAnime = '.c-loader-bg' // loading表示
-    const bgTextAnime = '.c-loader-text span' // loadingテキスト表示
+    const bgTextAnime = '.c-loader-text' // 開いた直後文字表示回避
+    const bgText2Anime = '.c-loader-text span' // loadingテキスト表示
     const bgLine1Anime = '.c-loader-bg-line1' // loading表示 Line1
     const bgLine2Anime = '.c-loader-bg-line2' // loading表示 Line2
     const bgLine3Anime = '.c-loader-bg-line3' // loading表示 Line3
     const bgLine4Anime = '.c-loader-bg-line4' // loading表示 Line4
-    const leftAnime = '.animation' // section 左下から浮き上がり
     const headerAnime = '.c-header' // ヘッダー遅延表示
+
+    const leftAnime = '.animation' // section 左下から浮き上がり
 
     const lineAnimation = {
       backgroundColor: 'white',
@@ -171,51 +178,71 @@ export default {
       y: 0,
       duration: 1
     }
-    // timelineを作成
-    const tl = this.$gsap.timeline()
-    // 初期設定
-    this.$gsap.set(bgTextAnime, {
-      opacity: 0
-    })
-    this.$gsap.set([bgLine1Anime, bgLine4Anime], {
-      x: '-100%',
-      y: 200,
-      opacity: 1
-    })
-    this.$gsap.set([bgLine2Anime, bgLine3Anime], {
-      x: '-100%',
-      y: 400,
-      opacity: 1
-    })
-    this.$gsap.set(headerAnime, {
-      opacity: 0,
-      y: -50
-    })
+    if (!sessionStorage.getItem('accessCount')) {
+      sessionStorage.setItem('accessCount', 1)
+      const jsText = document.querySelectorAll('.c-loader-text')
+      jsText.forEach((target) => {
+        let newText = ''
+        const text = target.textContent
+        const result = text.split('')
+        for (let i = 0; i < result.length; i++) {
+          newText += '<span>' + result[i] + '</span>'
+        }
+        target.innerHTML = newText
+      })
+      // timelineを作成
+      const tl = this.$gsap.timeline()
+      // 初期設定
+      this.$gsap.set([bgTextAnime, bgText2Anime], {
+        opacity: 0
+      })
+      this.$gsap.set([bgLine1Anime, bgLine4Anime], {
+        x: '-100%',
+        y: 200,
+        opacity: 1
+      })
+      this.$gsap.set([bgLine2Anime, bgLine3Anime], {
+        x: '-100%',
+        y: 400,
+        opacity: 1
+      })
+      this.$gsap.set(headerAnime, {
+        opacity: 0,
+        y: -50
+      })
+
+      // アニメーション定義
+      tl.to(bgTextAnime, {
+        opacity: 1,
+        duration: 0.1
+      }).to(bgText2Anime, {
+        opacity: 1,
+        duration: 2,
+        stagger: {
+          amount: 1,
+          from: 'start',
+          ease: 'sine.in'
+        }
+      }).to(bgLine1Anime, lineAnimation, '-=0.5'
+      ).to(bgLine2Anime, lineAnimation, '-=0.4'
+      ).to(bgLine3Anime, lineAnimation, '-=0.4'
+      ).to(bgLine4Anime, lineAnimation, '-=0.4'
+      ).to(bgAnime, {
+        opacity: 0,
+        duration: 2.5
+      }).to(headerAnime, {
+        opacity: 1,
+        y: 0
+      })
+    }
+
+    // スクロールアニメーション
     this.$gsap.set(leftAnime, {
       opacity: 0,
       x: -100,
       y: 100
     })
-    // アニメーション定義
-    tl.to(bgTextAnime, {
-      opacity: 1,
-      duration: 2,
-      stagger: {
-        amount: 1,
-        from: 'start',
-        ease: 'sine.in'
-      }
-    }).to(bgLine1Anime, lineAnimation
-    ).to(bgLine2Anime, lineAnimation
-    ).to(bgLine3Anime, lineAnimation
-    ).to(bgLine4Anime, lineAnimation
-    ).to(bgAnime, {
-      opacity: 0,
-      duration: 3
-    }).to(headerAnime, {
-      opacity: 1,
-      y: 0
-    })
+
     this.$gsap.to(leftAnime, {
       scrollTrigger: {
         trigger: leftAnime
