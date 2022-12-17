@@ -7,6 +7,7 @@
 // } : {}
 
 // let routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/wls-site/': '/'
+let routerBase = '/'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -85,9 +86,9 @@ export default {
   },
 
   // routerBase,
-  // router: {
-  //   base: routerBase
-  // },
+  router: {
+    base: routerBase
+  },
   generate: {
     dir: 'docs'
   },
