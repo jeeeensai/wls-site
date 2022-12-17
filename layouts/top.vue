@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: 'DefaultLayout',
+  name: 'TopLayout',
   data () {
     return {
       items: [
