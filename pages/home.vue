@@ -44,7 +44,7 @@
 import Card from '~/components/Card'
 
 export default {
-  name: 'IndexPage',
+  name: 'HPage',
   components: {
     Card
   },
