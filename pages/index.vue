@@ -153,13 +153,13 @@ export default {
       accessCount: false
     }
   },
-  beforeMount () {
-    if (!sessionStorage.getItem('accessCount')) {
-      this.accessCount = true
-    } else { // 二回目以降ローディングアニメーションさせない
-      this.accessCount = false
-    }
-  },
+  // beforeMount () {
+  //   if (!sessionStorage.getItem('accessCount')) {
+  //     this.accessCount = true
+  //   } else { // 二回目以降ローディングアニメーションさせない
+  //     this.accessCount = false
+  //   }
+  // },
   mounted () {
     // アニメーションクラスの変数宣言
     const bgAnime = '.c-loader-bg' // loading表示
