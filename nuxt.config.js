@@ -6,8 +6,8 @@
 //   }
 // } : {}
 
-// let routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/wls-site/': '/'
-let routerBase = '/'
+let routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/wls-site/': '/'
+// let routerBase = '/'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
