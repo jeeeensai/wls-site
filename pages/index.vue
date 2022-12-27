@@ -1,18 +1,14 @@
 <template>
   <div>
-    <client-only>
-      <template v-if="accessCount">
-        <div class="c-loader-bg">
-          <div class="c-loader-bg-line1" />
-          <div class="c-loader-bg-line2" />
-          <div class="c-loader-bg-line3" />
-          <div class="c-loader-bg-line4" />
-          <span class="has-text-white is-size-3 c-loader-text">
-            ORIGINAL W.L.S
-          </span>
-        </div>
-      </template>
-    </client-only>
+    <div v-show="accessCount" class="c-loader-bg">
+      <div class="c-loader-bg-line1" />
+      <div class="c-loader-bg-line2" />
+      <div class="c-loader-bg-line3" />
+      <div class="c-loader-bg-line4" />
+      <span class="has-text-white is-size-3 c-loader-text">
+        ORIGINAL W.L.S
+      </span>
+    </div>
     <div class="anime_content">
       <section class="hero is-fullheight-with-navbar hero-back-image" />
       <div class="mb-2">
@@ -155,13 +151,6 @@ export default {
       accessCount: false
     }
   },
-  beforeMount () {
-    if (!sessionStorage.getItem('accessCount')) {
-      this.accessCount = true
-    } else { // 二回目以降ローディングアニメーションさせない
-      this.accessCount = false
-    }
-  },
   mounted () {
     // アニメーションクラスの変数宣言
     const bgAnime = '.c-loader-bg' // loading表示
@@ -183,6 +172,7 @@ export default {
     }
     if (!sessionStorage.getItem('accessCount')) {
       sessionStorage.setItem('accessCount', 1)
+      this.accessCount = true
       const jsText = document.querySelectorAll('.c-loader-text')
       jsText.forEach((target) => {
         let newText = ''
@@ -237,6 +227,8 @@ export default {
         opacity: 1,
         y: 0
       })
+    } else {
+      this.accessCount = false
     }
 
     // スクロールアニメーション
