@@ -1,16 +1,18 @@
 <template>
   <div>
-    <template v-if="accessCount">
-      <div class="c-loader-bg">
-        <div class="c-loader-bg-line1" />
-        <div class="c-loader-bg-line2" />
-        <div class="c-loader-bg-line3" />
-        <div class="c-loader-bg-line4" />
-        <span class="has-text-white is-size-3 c-loader-text">
-          ORIGINAL W.L.S
-        </span>
-      </div>
-    </template>
+    <client-only>
+      <template v-if="accessCount">
+        <div class="c-loader-bg">
+          <div class="c-loader-bg-line1" />
+          <div class="c-loader-bg-line2" />
+          <div class="c-loader-bg-line3" />
+          <div class="c-loader-bg-line4" />
+          <span class="has-text-white is-size-3 c-loader-text">
+            ORIGINAL W.L.S
+          </span>
+        </div>
+      </template>
+    </client-only>
     <div class="anime_content">
       <section class="hero is-fullheight-with-navbar hero-back-image" />
       <div class="mb-2">
