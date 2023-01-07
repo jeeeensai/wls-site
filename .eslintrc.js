@@ -15,5 +15,7 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    "no-unused-vars": "off", //使っていない変数を許可
+  }
 }
