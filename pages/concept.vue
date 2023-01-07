@@ -2,9 +2,9 @@
   <div class="hero is-fullheight-with-navbar hero-back-image-concept">
     <div class="is-flex is-align-items-center is-flex-direction-column concept_section">
       <section class="section">
-        <h2 class="title has-text-white my-5 is-size-3 is-size-1-desktop">
+        <h1 class="title has-text-white my-5 is-size-3 is-size-1-desktop">
           Basketball Club Team
-        </h2>
+        </h1>
         <div class="subtitle is-size-6 is-size-5-desktop mt-5 has-text-weight-bold five_items">
           <ol class="pl-6">
             <li class="fadeLeft">

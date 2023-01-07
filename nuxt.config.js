@@ -15,11 +15,18 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'wls-site',
+    title: '東大阪社会人バスケットボールチーム | ORIGINAL W.L.S',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: `ORGINAL W.L.Sの公式HP
+        大阪府東大阪市を中心に活動している社会人バスケットボールチームです。
+        メンバーは社会人男性13名程度で平均年齢は20代前半~40代半ばと幅広い年代が在籍してます。
+        随時新規加入メンバーを募集しております！！お気軽にお問い合わせください。`
+      },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -59,8 +66,17 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://original-wls.tk',
+    exclude: [
+      '/game2'
+    ]
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
