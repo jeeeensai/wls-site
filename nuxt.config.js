@@ -74,7 +74,8 @@ export default {
     path: '/sitemap.xml',
     hostname: 'https://original-wls.tk',
     exclude: [
-      '/game2'
+      '/game2',
+      '/inspire'
     ]
   },
 
