@@ -38,6 +38,11 @@ export default {
   name: 'ConceptPage',
   layout () {
     return 'top'
+  },
+  head () {
+    return {
+      title: '- concept'
+    }
   }
 }
 </script>

@@ -113,7 +113,9 @@ export default {
         moment('2022-11-06'),
         moment('2022-11-13'),
         moment('2022-12-11'),
-        moment('2022-12-25')
+        moment('2022-12-25'),
+        moment('2023-01-22'),
+        moment('2023-01-29')
       ],
       // 試合の日程が決まり次第、以下の日程を調整
       gameDay: [
@@ -122,6 +124,11 @@ export default {
       ],
       // 他何かあれば、以下の日程を調整
       otherDay: []
+    }
+  },
+  head () {
+    return {
+      title: '- schedule'
     }
   },
   computed: {

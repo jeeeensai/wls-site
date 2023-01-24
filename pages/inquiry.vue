@@ -19,6 +19,11 @@ export default {
   name: 'InquiryPage',
   layout () {
     return 'top'
+  },
+  head () {
+    return {
+      title: '- inquiry'
+    }
   }
 }
 </script>

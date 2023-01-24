@@ -31,6 +31,11 @@ export default {
       ],
       index: null
     }
+  },
+  head () {
+    return {
+      title: '- picture'
+    }
   }
 }
 </script>

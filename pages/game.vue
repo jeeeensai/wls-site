@@ -69,6 +69,20 @@ export default {
       // 試合結果決まり次第、以下データを追加
       gameDatas: [
         {
+          date: moment('2023-01-08'),
+          place: '美原体育館',
+          opponent: 'RAID',
+          opponentPoint: 0,
+          originalPoint: 20
+        },
+        {
+          date: moment('2022-12-03'),
+          place: 'ひまわりドーム',
+          opponent: 'SUNSET',
+          opponentPoint: 65,
+          originalPoint: 59
+        },
+        {
           date: moment('2022-10-10'),
           place: '臨海スポーツセンター',
           opponent: 'STAND PLAY',
@@ -132,6 +146,11 @@ export default {
           originalPoint: 85
         }
       ]
+    }
+  },
+  head () {
+    return {
+      title: '- game'
     }
   }
 }
