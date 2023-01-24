@@ -15,7 +15,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '東大阪社会人バスケットボールチーム | ORIGINAL W.L.S',
+    titleTemplate: 'ORIGINAL W.L.S | 東大阪社会人バスケットボールチーム %s',
+    // title: 'ORIGINAL W.L.S | 東大阪社会人バスケットボールチーム',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -24,7 +25,6 @@ export default {
         name: 'description',
         content: `ORGINAL W.L.Sの公式HP
         大阪府東大阪市を中心に活動している社会人バスケットボールチームです。
-        メンバーは社会人男性13名程度で平均年齢は20代前半~40代半ばと幅広い年代が在籍してます。
         随時新規加入メンバーを募集しております！！お気軽にお問い合わせください。`
       },
       { name: 'format-detection', content: 'telephone=no' }
