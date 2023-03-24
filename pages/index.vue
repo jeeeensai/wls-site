@@ -17,7 +17,7 @@
             ORIGINAL W.L.Sとは
           </h1>
           <p class="has-text-white is-size-7-mobile">
-            <strong class="has-text-white">大阪府東大阪市</strong>を中心に活動している<strong class="has-text-white">社会人バスケットボールチーム</strong>です。<br>
+            <strong class="has-text-white">大阪府東大阪市</strong>を中心に活動している<strong class="has-text-white">社会人バスケットボールクラブチーム</strong>です。<br>
             メンバーは社会人男性13名程度で平均年齢は20代前半~40代半ばと幅広い年代が在籍してます。<br>
             現在、大阪社会人バスケットボール連盟男子2部Aに所属しており、1部昇格を目指して奮闘中です。<br>
             随時新規加入<strong class="has-text-white">メンバーを募集</strong>しております！！<br>
