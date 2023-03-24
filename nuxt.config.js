@@ -15,7 +15,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: 'ORIGINAL W.L.S | 東大阪社会人バスケットボールチーム %s',
+    titleTemplate: 'ORIGINAL W.L.S | 東大阪社会人バスケットボールクラブチーム %s',
     // title: 'ORIGINAL W.L.S | 東大阪社会人バスケットボールチーム',
     meta: [
       { charset: 'utf-8' },
@@ -24,7 +24,7 @@ export default {
         hid: 'description',
         name: 'description',
         content: `ORGINAL W.L.Sの公式HP
-        大阪府東大阪市を中心に活動している社会人バスケットボールチームです。
+        大阪府東大阪市を中心に活動している社会人バスケットボールクラブチームです。
         随時新規加入メンバーを募集しております！！お気軽にお問い合わせください。`
       },
       { name: 'format-detection', content: 'telephone=no' }
