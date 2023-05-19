@@ -77,7 +77,7 @@
                     v-if="day.other"
                     class="calendar_contents is-size-6-desktop pb-4"
                   >
-                    XXXX
+                    {{ day.otherName }}
                   </p>
                 </div>
               </div>
@@ -135,7 +135,20 @@ export default {
         moment('2023-09-24')
       ],
       // 他何かあれば、以下の日程を調整
-      otherDay: []
+      otherDay: [
+        {
+          moment: moment('2023-06-18'),
+          otherName: '東大阪市民大会'
+        },
+        {
+          moment: moment('2023-06-25'),
+          otherName: '東大阪市民大会'
+        },
+        {
+          moment: moment('2023-07-02'),
+          otherName: '東大阪市民大会'
+        }
+      ]
     }
   },
   head () {
@@ -177,7 +190,8 @@ export default {
             midori: false,
             okibe: false,
             game: false,
-            other: false
+            other: false,
+            otherName: ''
           }
           // 日付によるFontColorの調整
           if (moment().isSame(startDate, 'day')) {
@@ -208,8 +222,10 @@ export default {
           }
           // 他何かあれば
           for (const item of this.otherDay) {
-            if (item.isSame(startDate, 'day')) {
+            if (item.moment.isSame(startDate, 'day')) {
               dateObject.other = true
+              dateObject.otherName = item.otherName
+              dateObject.classTd = 'has-background-link-light'
             }
           }
           weekRow.push(dateObject)

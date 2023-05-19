@@ -69,6 +69,13 @@ export default {
       // 試合結果決まり次第、以下データを追加
       gameDatas: [
         {
+          date: moment('2023-05-13'),
+          place: '丸善インテックスアリーナ サブ',
+          opponent: '法曹バスケットボール',
+          opponentPoint: 0,
+          originalPoint: 20
+        },
+        {
           date: moment('2023-01-08'),
           place: '美原体育館',
           opponent: 'RAID',
