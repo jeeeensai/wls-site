@@ -69,6 +69,13 @@ export default {
       // 試合結果決まり次第、以下データを追加
       gameDatas: [
         {
+          date: moment('2023-06-17'),
+          place: '大阪市立千島体育館',
+          opponent: 'teksa.B',
+          opponentPoint: 45,
+          originalPoint: 43
+        },
+        {
           date: moment('2023-05-13'),
           place: '丸善インテックスアリーナ サブ',
           opponent: '法曹バスケットボール',
