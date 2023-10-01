@@ -69,6 +69,20 @@ export default {
       // 試合結果決まり次第、以下データを追加
       gameDatas: [
         {
+          date: moment('2023-09-24'),
+          place: '原池公園体育館',
+          opponent: '新撰組',
+          opponentPoint: 51,
+          originalPoint: 65
+        },
+        {
+          date: moment('2023-08-26'),
+          place: '丸善インテックスアリーナ サブ',
+          opponent: 'UNIVERSALLANGUAGE',
+          opponentPoint: 47,
+          originalPoint: 39
+        },
+        {
           date: moment('2023-06-17'),
           place: '大阪市立千島体育館',
           opponent: 'teksa.B',
