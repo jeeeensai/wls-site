@@ -69,6 +69,13 @@ export default {
       // 試合結果決まり次第、以下データを追加
       gameDatas: [
         {
+          date: moment('2023-10-07'),
+          place: '美原体育館',
+          opponent: 'RUSH',
+          opponentPoint: 48,
+          originalPoint: 79
+        },
+        {
           date: moment('2023-09-24'),
           place: '原池公園体育館',
           opponent: '新撰組',

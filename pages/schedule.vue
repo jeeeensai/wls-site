@@ -133,7 +133,8 @@ export default {
         moment('2023-09-10'),
         moment('2023-09-17'),
         moment('2023-10-01'),
-        moment('2023-10-22')
+        moment('2023-10-22'),
+        moment('2023-11-05')
       ],
       // 試合の日程が決まり次第、以下の日程を調整
       gameDay: [
@@ -146,7 +147,7 @@ export default {
         moment('2023-10-08'),
         moment('2023-12-02'),
         moment('2023-01-21'),
-        moment('2023-02-12'),
+        moment('2023-02-12')
       ],
       // 他何かあれば、以下の日程を調整
       otherDay: [
@@ -161,6 +162,18 @@ export default {
         {
           moment: moment('2023-07-02'),
           otherName: '東大阪市民大会'
+        },
+        {
+          moment: moment('2023-11-12'),
+          otherName: '緑中学校 練習'
+        },
+        {
+          moment: moment('2023-11-25'),
+          otherName: '練習試合'
+        },
+        {
+          moment: moment('2023-12-10'),
+          otherName: '緑中学校 練習'
         }
       ]
     }
