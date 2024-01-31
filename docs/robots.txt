@@ -1,0 +1,3 @@
+User-Agent:*
+Disallow:''
+Sitemap:http://original-wls.f5.si/sitemap

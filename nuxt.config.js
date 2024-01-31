@@ -67,7 +67,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    // '@nuxtjs/robots'
   ],
 
   sitemap: {
@@ -79,6 +80,13 @@ export default {
       '/inspire'
     ]
   },
+
+  // robots: {
+  //   rules: {
+  //     UserAgent: '*',
+  //     Disallow: ''
+  //   }
+  // },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
