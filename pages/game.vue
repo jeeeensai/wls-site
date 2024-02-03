@@ -69,6 +69,20 @@ export default {
       // 試合結果決まり次第、以下データを追加
       gameDatas: [
         {
+          date: moment('2024-01-21'),
+          place: '臨海スポーツセンター',
+          opponent: '阪和興業',
+          opponentPoint: 56,
+          originalPoint: 58
+        },
+        {
+          date: moment('2023-12-02'),
+          place: '丸善インテックスアリーナ サブ',
+          opponent: 'P-Snatch',
+          opponentPoint: 40,
+          originalPoint: 73
+        },
+        {
           date: moment('2023-10-07'),
           place: '美原体育館',
           opponent: 'RUSH',
